@@ -1,0 +1,6 @@
+name,email,password,semester,github,linkedin
+Alice Smith,alice@example.com,hashedpassword123,Fall 2025,https://github.com/alicesmith,https://linkedin.com/in/alicesmith
+Bob Johnson,bob@example.com,hashedpassword123,Spring 2025,https://github.com/bobjohnson,https://linkedin.com/in/bobjohnson
+Carol Davis,carol@example.com,hashedpassword123,Summer 2024,https://github.com/caroldavis,https://linkedin.com/in/caroldavis
+David Lee,david@example.com,hashedpassword123,Fall 2025,https://github.com/davidlee,https://linkedin.com/in/davidlee
+Eva Brown,eva@example.com,hashedpassword123,Winter 2024,https://github.com/evabrown,https://linkedin.com/in/evabrown
