@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:4000/api', // backend API
+  baseURL: '/api', // Let nginx proxy /api to backend
 });
 
 export default api;
