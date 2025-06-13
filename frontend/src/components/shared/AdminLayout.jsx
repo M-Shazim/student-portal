@@ -1,30 +1,58 @@
-import { Link, Outlet } from 'react-router-dom';
-// import './adminLayout.css'; // optional styles
+import { NavLink, Outlet } from 'react-router-dom';
 
 export default function AdminLayout() {
   return (
-    <div className="admin-dashboard" style={{ display: 'flex', minHeight: '100vh' }}>
-      <aside
+    <div className="admin-dashboard" style={{ minHeight: '100vh', backgroundColor: '#f4f6f8' }}>
+      <header
         style={{
-          width: '220px',
-          background: '#2c3e50',
-          color: '#fff',
-          padding: '1rem',
+          backgroundColor: '#1e293b',
+          color: '#ffffff',
+          padding: '1rem 2rem',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
         }}
       >
-        <h2 style={{ marginBottom: '2rem' }}>Admin Panel</h2>
-        <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <Link to="/admin/students" style={{ color: '#ecf0f1' }}>Students</Link>
-          <Link to="/admin/tasks" style={{ color: '#ecf0f1' }}>Tasks</Link>
-          <Link to="/admin/reports" style={{ color: '#ecf0f1' }}>Reports</Link>
-          <Link to="/admin/messages" style={{ color: '#ecf0f1' }}>Messages</Link>
-          <Link to="/admin/blogs" style={{ color: '#ecf0f1' }}>Blogs</Link>
+        <h2 style={{ margin: 0, fontSize: '1.5rem' }}>Admin Panel</h2>
+        <nav style={{ display: 'flex', gap: '1.5rem' }}>
+          {navLinks.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              style={({ isActive }) => ({
+                ...navLinkStyle,
+                backgroundColor: isActive ? '#334155' : 'transparent',
+              })}
+            >
+              {label}
+            </NavLink>
+          ))}
         </nav>
-      </aside>
+      </header>
 
-      <main style={{ flex: 1, padding: '2rem' }}>
+      <main style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
         <Outlet />
       </main>
     </div>
   );
 }
+
+const navLinks = [
+  { to: '/admin/students', label: 'Students' },
+  { to: '/admin/tasks', label: 'Tasks' },
+  { to: '/admin/reports', label: 'Reports' },
+  { to: '/admin/messages', label: 'Messages' },
+  { to: '/admin/blogs', label: 'Blogs' },
+];
+
+const navLinkStyle = {
+  color: '#e2e8f0',
+  textDecoration: 'none',
+  fontWeight: '500',
+  padding: '0.5rem 1rem',
+  borderRadius: '6px',
+  transition: 'background-color 0.3s ease, transform 0.2s ease',
+  display: 'inline-block',
+};
+

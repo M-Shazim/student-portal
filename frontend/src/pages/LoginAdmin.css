@@ -23,7 +23,7 @@
 
 /* Left Side - Branding */
 .login-branding {
-  background: linear-gradient(135deg, #1a365d 0%, #2d5aa0 100%);
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
   color: white;
   padding: 3rem;
   display: flex;
@@ -193,8 +193,8 @@
 
 .form-input:focus {
   outline: none;
-  border-color: #3182ce;
-  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
 }
 
 .form-input::placeholder {
@@ -205,7 +205,7 @@
 .login-button {
   width: 100%;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #3182ce 0%, #2c5aa0 100%);
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -224,7 +224,7 @@
 
 .login-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(49, 130, 206, 0.3);
+  box-shadow: 0 10px 20px rgba(66, 153, 225, 0.3);
 }
 
 .login-button:active:not(:disabled) {
@@ -272,7 +272,7 @@
 
 .back-link,
 .switch-link {
-  color: #3182ce;
+  color: #4299e1;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
@@ -281,7 +281,7 @@
 
 .back-link:hover,
 .switch-link:hover {
-  color: #2c5aa0;
+  color: #3182ce;
   text-decoration: underline;
 }
 
