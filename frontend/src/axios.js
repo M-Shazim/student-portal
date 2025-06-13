@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api', // Let nginx proxy /api to backend
+baseURL: 'http://13.48.120.194/api',
 });
 
 export default api;

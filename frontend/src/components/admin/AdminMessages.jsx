@@ -5,7 +5,9 @@ import api from '../../axios';
 
 import { useAuth } from '../../context/AuthContext';
 
-const socket = io('http://localhost:4000'); // replace with your backend host if different
+const socket = io(import.meta.env.VITE_SOCKET_API_URL);
+ // replace with your server IP or domain
+ // replace with your backend host if different
 
 export default function AdminMessages() {
   const { auth } = useAuth();

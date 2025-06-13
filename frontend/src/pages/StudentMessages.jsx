@@ -2,8 +2,9 @@ import { useEffect, useState, useRef } from 'react';
 import io from 'socket.io-client';
 import api from '../axios';
 import { useAuth } from '../context/AuthContext';
-
-const socket = io('http://localhost:4000'); // your backend socket.io url
+const socket = io(import.meta.env.VITE_SOCKET_API_URL);
+  // replace with your server IP or domain
+// your backend socket.io url
 
 export default function StudentMessages() {
   const { auth } = useAuth();
